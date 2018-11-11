@@ -26,7 +26,7 @@ class ApplicationController < Sinatra::Base
     end
 
     def all_recipes
-
+      Recipe.all
     end
   end
 
