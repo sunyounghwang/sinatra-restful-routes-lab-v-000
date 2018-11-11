@@ -31,7 +31,7 @@ class ApplicationController < Sinatra::Base
   end
 
   delete "/recipes/:id" do
-    
+    current_recipe.delete
   end
 
   helpers do
