@@ -47,5 +47,4 @@ class ApplicationController < Sinatra::Base
       Recipe.last
     end
   end
-
 end
