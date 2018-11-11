@@ -21,12 +21,12 @@ class ApplicationController < Sinatra::Base
   end
 
   helpers do
-    def current_recipe
-      Recipe.find_by_id(params[:id])
-    end
-
     def all_recipes
       Recipe.all
+    end
+    
+    def current_recipe
+      Recipe.find_by_id(params[:id])
     end
   end
 
