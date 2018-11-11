@@ -23,6 +23,7 @@ class ApplicationController < Sinatra::Base
 
   get "/recipes/:id/edit" do
     erb :edit
+    binding.pry
   end
 
   patch "/recipes/:id/" do
