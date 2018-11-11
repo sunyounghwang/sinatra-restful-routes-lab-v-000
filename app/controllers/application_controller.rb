@@ -14,6 +14,7 @@ class ApplicationController < Sinatra::Base
 
   post "/recipes" do
     Post.create(name: params[:name], cook_time: params[:cook_time], ingredients: params[:ingredients])
+    erb :index
   end
 
   get "/recipes/:id" do
