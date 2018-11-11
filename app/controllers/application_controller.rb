@@ -26,8 +26,8 @@ class ApplicationController < Sinatra::Base
   end
 
   patch "/recipes/:id/" do
-    Recipe.update(name: params[:name], cook_time: params[:cook_time], ingredients: params[:ingredients])
-    
+    current_recipe.update(name: params[:name], cook_time: params[:cook_time], ingredients: params[:ingredients])
+
   end
 
   helpers do
