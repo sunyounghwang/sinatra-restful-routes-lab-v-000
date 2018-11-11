@@ -5,7 +5,6 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/recipes" do
-    @recipes = Recipe.all
     erb :index
   end
 
@@ -24,6 +23,10 @@ class ApplicationController < Sinatra::Base
   helpers do
     def current_recipe
       Recipe.find_by_id(params[:id])
+    end
+
+    def all_recipes
+
     end
   end
 
