@@ -8,10 +8,4 @@ class ApplicationController < Sinatra::Base
     erb :index
   end
 
-  helpers do
-    def display_recipes 
-      
-    end
-  end
-
 end
