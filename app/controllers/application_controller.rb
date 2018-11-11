@@ -10,7 +10,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/recipes/:id" do
-    @recipe = Recipe.find_by_id(params[:id])
+    @recipe =
     erb :show
   end
 
@@ -19,7 +19,13 @@ class ApplicationController < Sinatra::Base
   end
 
   patch "/recipes/:id/" do
-    
+
+  end
+
+  helpers do
+    def current_recipe
+      Recipe.find_by_id(params[:id])
+    end
   end
 
 end
