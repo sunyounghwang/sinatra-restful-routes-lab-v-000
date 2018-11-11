@@ -30,6 +30,10 @@ class ApplicationController < Sinatra::Base
     redirect to "/recipes/#{current_recipe.id}"
   end
 
+  delete "/recipes/:id" do
+    
+  end
+
   helpers do
     def all_recipes
       Recipe.all
