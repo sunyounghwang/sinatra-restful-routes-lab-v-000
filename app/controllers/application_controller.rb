@@ -37,6 +37,10 @@ class ApplicationController < Sinatra::Base
     def current_recipe
       Recipe.find_by_id(params[:id])
     end
+
+    def last_created_recipe
+      Recipe.last
+    end
   end
 
 end
