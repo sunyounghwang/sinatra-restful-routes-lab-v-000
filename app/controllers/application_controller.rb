@@ -8,6 +8,10 @@ class ApplicationController < Sinatra::Base
     erb :index
   end
 
+  get "/recipes/new" do
+    
+  end
+
   get "/recipes/:id" do
     erb :show
   end
@@ -24,7 +28,7 @@ class ApplicationController < Sinatra::Base
     def all_recipes
       Recipe.all
     end
-    
+
     def current_recipe
       Recipe.find_by_id(params[:id])
     end
