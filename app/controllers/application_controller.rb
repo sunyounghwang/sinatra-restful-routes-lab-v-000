@@ -9,7 +9,9 @@ class ApplicationController < Sinatra::Base
   end
 
   helpers do
-
+    def display_recipes 
+      
+    end
   end
 
 end
